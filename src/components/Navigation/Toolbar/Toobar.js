@@ -9,7 +9,9 @@ const toolbar = (props) => {
     <header className={classes.Toolbar}>
       <div>MENU</div>
       <Logo height='80%' />
-      <Navigation />
+      <nav className={classes.DesktopOnly}>
+        <Navigation />
+      </nav>
     </header>
   );
 };
