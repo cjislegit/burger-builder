@@ -13,10 +13,14 @@ class Layout extends Component {
     this.setState({ showSideDrawer: false });
   };
 
+  sideDrawerOpenHandler = () => {
+    this.setState({ showSideDrawer: true });
+  };
+
   render() {
     return (
       <React.Fragment>
-        <Toolbar />
+        <Toolbar open={this.sideDrawerOpenHandler} />
         <SideDrawer
           open={this.state.showSideDrawer}
           closed={this.sideDrawerClosedHandler}
