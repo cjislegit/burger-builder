@@ -6,7 +6,10 @@ import Backdrop from '../Backdrop/Backdrop';
 class Modal extends Component {
   shouldComponentUpdate(nextProps, nextState) {
     // Checks to see if the new show prop match the old prop, if not then the compoenent rerenders
-    return nextProps.show !== this.props.show;
+    return (
+      nextProps.show !== this.props.show ||
+      nextProps.children !== this.props.children
+    );
   }
   render() {
     return (
